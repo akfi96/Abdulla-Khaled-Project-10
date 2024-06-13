@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+}
+.info-input{
+    box-shadow: 0px 0px 20px rgb(255, 196, 0);
+}
+::selection {
+    background: rgb(255, 196, 0);
+}
+input{
+    background: transparent;
+    transition: 0.3s;
+}
+input:focus{
+    outline: none;
+    border: 2px solid rgb(255, 196, 0);
+}
+nav{
+    box-shadow: 0px 0px 5px rgb(255, 196, 0);
+}
