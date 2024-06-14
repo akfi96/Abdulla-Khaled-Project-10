@@ -21,6 +21,7 @@ function lookup(){
     var email = emailSignUp.value
     if(localStorage.getItem(email) === null ){
         add();
+        window.location.assign("index.html")
     }
     else{
         window.alert("This email already exists")
@@ -37,7 +38,6 @@ function signinlookup(){
         var name = userinfo.name
         console.log(userinfo.pass);
         if (userinfo.pass == pass){
-            welcomeName.innerHTML = `${name}`
             window.location.assign("welcome.html")
             // window.alert("pass is correct")
         }
@@ -46,4 +46,3 @@ function signinlookup(){
         }
     }
 }
-// console.log(localStorage.getItem("users"));
