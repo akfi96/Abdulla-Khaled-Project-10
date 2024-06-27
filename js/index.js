@@ -46,3 +46,28 @@ function signinlookup(){
         }
     }
 }
+function inputvalidation(){
+    var nameRegex = /^[a-zA-Z]*$/;
+    var emailRegex = /^[a-zA-Z0-9][a-zA-Z0-9_.-]*@[a-zA-Z]*\.[a-zA-Z]*$/;
+    var passRegex = /(?=.*[A-Z])(?=.*[0-9]).{8,}/;
+
+    if(nameRegex.test(nameSignUp.value)){
+        if(emailRegex.test(emailSignUp.value)){
+            if(passRegex.test(passSignUp.value)){
+                lookup()
+            }
+            else{
+                window.alert("Password must have atleast one capital letter & one number & be atleast 8 char long")
+            }
+        }
+        else{
+            window.alert("Email format is incorrect for ex: aaa@bbb.com")
+        }
+    }
+    else{
+        window.alert("Name must only contain letters")
+    }
+}
+// /^[a-zA-Z]*$/ name signup (only letters)
+// /^[a-zA-Z0-9][a-zA-Z0-9_.-]*@[a-zA-Z]*\.[a-zA-Z]*$/ email signup
+// /(?=.*[A-Z])(?=.*[0-9]).{8,}/ (password atleast one capital letter & one number atleast 8 char long)
